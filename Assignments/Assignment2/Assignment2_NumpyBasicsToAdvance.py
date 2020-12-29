@@ -72,7 +72,9 @@ def function3():
     #extract those numbers from given array. those are must exist in 5,7 Table
     #example [35,70,105,..]
     a = np.arange(1, 100*10+1).reshape((100,10))
-    x = a[] #wrtie your code here
+    a = np.arange(1, 100*10+1).reshape((100,10))
+x=a[a%5 |a%7 ==0]
+print (x)        #wrtie your code here
     return x
     """
     Expected Output:
@@ -87,7 +89,10 @@ def function4():
    
     arr = np.arange(9).reshape(3,3)
   
-    return #wrtie your code here
+    
+print(arr)
+arr[:,[0, 1]] = arr[:,[1, 0]]
+print(arr) #wrtie your code here
     """
     Expected Output:
           array([[1, 0, 2],
@@ -99,7 +104,10 @@ def function4():
 def function5():
     #Create a null vector of size 20 with 4 rows and 5 columns with numpy function
    
-    z = #wrtie your code here
+     #wrtie your code here
+    z=np.arange(1, 21)
+z=np.zeros((4, 5))
+print(z)
   
     return z
     """
@@ -115,6 +123,11 @@ def function6():
     # Create a null vector of size 10 but the fifth and eighth value which is 10,20 respectively
    
     arr = #wrtie your code here
+    a
+rr=np.zeros(10)
+arr[5]=a10
+arr[8]=20
+print (arr)
   
     return arr
    
@@ -125,6 +138,10 @@ def function7():
     x = np.arange(4, dtype=np.int64)
   
     return #write your code here
+x = np.arange(4, dtype=np.int64)
+x=np.zeros(4, dtype=np.int64)
+print(x)
+x.dtype
 
     """
     Expected Output:
@@ -136,6 +153,8 @@ def function8():
     # Create a new array of 2x5 uints, filled with 6.
     
     x = #write your code here
+    x=np.full((2,6),6)
+    print(x)
   
     return x
 
@@ -150,6 +169,8 @@ def function9():
     # Create an array of 2, 4, 6, 8, ..., 100.
     
     a = # write your code here
+    a=np.arange(2, 101)
+print(a)
   
     return a
 
@@ -168,6 +189,11 @@ def function10():
     arr = np.array([[3,3,3],[4,4,4],[5,5,5]])
     brr = np.array([1,2,3])
     subt = # write your code here 
+    
+    arr = np.array([[3,3,3],[4,4,4],[5,5,5]])
+brr = np.array([1,2,3])
+subt = arr-brr[:,None]
+print(subt)
   
     return subt
 
@@ -184,7 +210,12 @@ def function11():
     # Replace all odd numbers in arr with -1 without changing arr.
     
     arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
-    ans = #write your code here 
+    ans = #write your code here
+    
+    arr = np.array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+#np.where(arr%3==0, -1, arr)
+arr[arr%2 == 1] = -1
+print(arr)
   
     return ans
 
@@ -199,7 +230,11 @@ def function12():
     # HINT: use stacking concept
     
     arr = np.array([1,2,3])
-    ans = #write your code here 
+    ans = #write your code here
+    
+    arr = np.array([1,2,3])
+arr =np.hstack((arr))
+print(arr)
   
     return ans
 
@@ -214,7 +249,8 @@ def function13():
     
     
     arr = np.array([2, 6, 1, 9, 10, 3, 27])
-    ans = #write your code here 
+    ans = #write your code here
+    
   
     return ans
 
